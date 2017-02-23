@@ -13,5 +13,12 @@
     "crawler"
   ],
   "author": "eliasdefrancisco@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
 }

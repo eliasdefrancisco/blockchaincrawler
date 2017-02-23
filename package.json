@@ -1,0 +1,17 @@
+{
+  "name": "blockchaincrawler",
+  "version": "1.0.0",
+  "description": "Blockchain explorer",
+  "main": "www/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blockchain",
+    "bitcoin",
+    "explorer",
+    "crawler"
+  ],
+  "author": "eliasdefrancisco@gmail.com",
+  "license": "ISC"
+}

@@ -4,7 +4,9 @@
   "description": "Blockchain explorer",
   "main": "www/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "gulp develop",
+    "build": "gulp build",
+    "run": "gulp run"
   },
   "keywords": [
     "blockchain",
@@ -18,7 +20,10 @@
     "babelify": "^7.3.0",
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "run-sequence": "^1.2.2",
+    "vinyl-source-stream": "^1.1.0"
   }
 }

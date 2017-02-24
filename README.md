@@ -40,3 +40,23 @@ https://github.com/sindresorhus/del
 ### Vinyl-source-stream
 Use text streams on gulp
 https://github.com/hughsk/vinyl-source-stream
+
+### jQuery
+Js DOM operations
+https://jquery.com/
+
+### Underscore
+Functional programming helper
+http://underscorejs.org/
+
+### Backbone
+Provide structure for model, collections and more
+http://backbonejs.org/
+
+### Marionette (Backbone.Marionette)
+Extends Views and collectionViews in Backbone structures
+http://marionettejs.com/
+
+### Babel-preset-es2015
+Allow ES6 when browserify transpile with Babel-preset-es2015
+https://github.com/babel/babel/tree/master/packages/babel-preset-es2015

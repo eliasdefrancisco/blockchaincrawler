@@ -32,7 +32,7 @@ gulp.task('browserify', function() {
   return browserify({
       entries: 'src/main.js',
       debug: true })
-    .transform(babelify) //.on('update', updateBrowserify)
+    .transform(babelify, { presets: ['es2015'] })
     .bundle()
     .pipe(source('main.js'))
     .pipe(gulp.dest('www'))

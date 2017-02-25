@@ -1,13 +1,18 @@
-function getView(){
-  const View = Marionette.View.extend({
-    template: _.template('<p>Marionette.View From blockExplorer</p>')
+import BlockExplorerView from './views/blockExplorer'
+
+function showView(viewer){
+  const block = Modules.CMS.getBlockByHash()
+  block.fetch().then(() => {
+    const blockExplorerView = new BlockExplorerView({model: block})
+    console.log(blockExplorerView)
+    viewer(blockExplorerView)
   })
-  return new View()
+
 }
 
 
 // API
 const API = {
-  getView
+  showView
 }
 export default API

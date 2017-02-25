@@ -3,8 +3,7 @@ function showView(view){
 }
 
 function start(){
-  console.log(window.Modules.BlockExplorer.getView())
-  showView(window.Modules.BlockExplorer.getView())
+  showView(Modules.BlockExplorer.showView(showView))
 }
 
 // API

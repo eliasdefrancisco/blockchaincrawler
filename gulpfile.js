@@ -6,6 +6,7 @@ const sass = require('gulp-sass')
 const runSequence = require('run-sequence')
 const del = require('del')
 const source = require('vinyl-source-stream')
+const stringify = require('stringify')
 
 
 gulp.task('browserSync', function(){
@@ -32,6 +33,7 @@ gulp.task('browserify', function() {
   return browserify({
       entries: 'src/main.js',
       debug: true })
+    .transform(stringify, { appliesTo: ['.html'] })
     .transform(babelify, { presets: ['es2015'] })
     .bundle()
     .pipe(source('main.js'))

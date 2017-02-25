@@ -60,3 +60,7 @@ http://marionettejs.com/
 ### Babel-preset-es2015
 Allow ES6 when browserify transpile with Babel-preset-es2015
 https://github.com/babel/babel/tree/master/packages/babel-preset-es2015
+
+### Stringify
+Include html templates in javascript files
+https://github.com/JohnPostlethwait/stringify

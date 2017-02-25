@@ -4,7 +4,6 @@ function showView(viewer){
   const block = Modules.CMS.getBlockByHash()
   block.fetch().then(() => {
     const blockExplorerView = new BlockExplorerView({model: block})
-    console.log(blockExplorerView)
     viewer(blockExplorerView)
   })
 

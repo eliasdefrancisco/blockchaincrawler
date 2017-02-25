@@ -14,7 +14,7 @@ function setGlobal(){
   window.Modules.BlockExplorer = blockExplorer
   window.Modules.CMS = cms
 }
-
+  
 function init(){
   setGlobal()
   Modules.Layout.start()

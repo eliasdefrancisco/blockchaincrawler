@@ -3,7 +3,7 @@ function showView(view){
 }
 
 function start(){
-  showView(Modules.BlockExplorer.showView(showView))
+  Modules.BlockExplorer.showView(showView)
 }
 
 // API

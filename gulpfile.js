@@ -1,5 +1,5 @@
 const gulp = require('gulp')
-const BrowserSync = require('browser-sync') // .create() !!!
+const browserSync = require('browser-sync').create() // .create() !!!
 const browserify = require('browserify')
 const babelify = require('babelify')
 const sass = require('gulp-sass')
@@ -10,11 +10,13 @@ const stringify = require('stringify')
 
 
 gulp.task('browserSync', function(){
-  const browserSync = BrowserSync.create()
   browserSync.init({
     server: 'www',
     notify: false
   })
+})
+
+gulp.task('browserSyncReload', function(){
   browserSync.reload()
 })
 
@@ -52,17 +54,21 @@ gulp.task('run', function(callback){
   return runSequence('build', 'browserSync', callback)
 })
 
+gulp.task('reloadDevelop', function(callback){
+  return runSequence('build', 'browserSyncReload', callback)
+})
+
 gulp.task('develop', function(callback){
   // Infinite loop for watching files ...
   gulp.watch([
-      'src/index.html',
+      'src/**/*.html',
       'src/**/*.js',
       'src/assets/**/*',
       'src/**/*.scss'
     ],
-    ['develop']
+    ['reloadDevelop']
   )
-  return runSequence('run', callback)
+  return runSequence('build', 'browserSync', callback)
 })
 
 // Default task when gulp is executed by the system

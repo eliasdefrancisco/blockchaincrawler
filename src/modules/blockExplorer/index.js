@@ -12,6 +12,9 @@ const blockExplorerView = new BlockExplorerView({
   },
   onPreviousBtnPressed(){
     showBlockOnView(cms.getBlockByHash(currentBlock.get('prev_block')))
+  },
+  onHashBtnPressed(){
+    showBlockOnView(cms.getBlockByHash(this.ui.hashIn.val()))
   }
 })
 

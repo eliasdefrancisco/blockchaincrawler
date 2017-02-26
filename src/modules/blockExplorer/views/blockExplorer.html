@@ -1,7 +1,16 @@
 <ul>
-  <li>blockHash: <%= hash %></li>
-  <li>prevBlockHash: <%= prev_block %></li>
+  <li><%= dateFormat(time) %></li>
+  <li>BlockNum: <%= height %></li>
+  <li>BlockHash: <%= hash %></li>
+  <li>PrevBlockHash: <%= prev_block %></li>
+  <li>Number of transactions: <%= txLength(tx) %></li>
 </ul>
-<input type="button" id="genesis-block-btn" value="Genesis Block"></input>
-<input type="button" id="latest-block-btn" value="Latest Block"></input>
-<input type="button" id="previous-block-btn" value="Previous Block"></input>
+<p>
+  <input type="button" id="genesis-block-btn" value="Genesis Block"></input>
+  <input type="button" id="latest-block-btn" value="Latest Block"></input>
+  <input type="button" id="previous-block-btn" value="Previous Block"></input>
+<p>
+<p>
+  <input type="text" id="hash-in" placeholder="Block hash"></input>
+  <input type="button" id="hash-btn" value="Get Block with Hash"></input>
+<p>

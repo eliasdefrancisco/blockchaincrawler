@@ -1,22 +1,24 @@
 import BlockExplorerView from './views/blockExplorer'
 
 let currentBlock // Store last BlockModel used (current)
+let cms // Store module which consults models
 
 const blockExplorerView = new BlockExplorerView({
   onGenesisBtnPressed(){
-    showBlockOnView(Modules.CMS.getGenesisBlock())
+    showBlockOnView(cms.getGenesisBlock())
   },
   onLatestBtnPressed(){
-    showBlockOnView(Modules.CMS.getLatestBlock())
+    showBlockOnView(cms.getLatestBlock())
   },
   onPreviousBtnPressed(){
-    showBlockOnView(Modules.CMS.getBlockByHash(currentBlock.get('prev_block')))
+    showBlockOnView(cms.getBlockByHash(currentBlock.get('prev_block')))
   }
 })
 
 function showBlockOnView(block, viewer){
   block.fetch().then(() => {
     currentBlock = block
+    console.log(currentBlock)
     blockExplorerView.model = block
     blockExplorerView.render()
     if(viewer) viewer(blockExplorerView)
@@ -26,8 +28,9 @@ function showBlockOnView(block, viewer){
 
 //// PUBLIC
 
-function showView(viewer){
-  showBlockOnView(Modules.CMS.getLatestBlock(), viewer)
+function showView(viewer, _cms){
+  cms = _cms
+  showBlockOnView(cms.getLatestBlock(), viewer)
 }
 
 export default { showView }

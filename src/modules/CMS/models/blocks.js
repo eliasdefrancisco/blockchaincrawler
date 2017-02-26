@@ -1,7 +1,6 @@
 const BlockModel = Backbone.Model.extend({
   initialize: function(_params){
     this.params = _params.join('/')
-    //console.log(this.params)
   },
   urlRoot: function(){
     return `https://blockchain.info/${this.params}?cors=true`

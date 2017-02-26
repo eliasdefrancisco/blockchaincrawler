@@ -5,8 +5,8 @@ function showView(view){
 
 //// PUBLIC
 
-function start(){
-  Modules.BlockExplorer.showView(showView)
+function startLy(blockExplorer, cms){
+  blockExplorer.showView(showView, cms)
 }
 
-export default { start }
+export default { startLy }

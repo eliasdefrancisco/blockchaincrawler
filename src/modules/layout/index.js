@@ -2,12 +2,11 @@ function showView(view){
   App.showView(view)
 }
 
+
+//// PUBLIC
+
 function start(){
   Modules.BlockExplorer.showView(showView)
 }
 
-// API
-const API = {
-  start
-}
-export default API
+export default { start }

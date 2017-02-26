@@ -4,10 +4,17 @@ function getBlockByHash(hash){
   return Blocks.getBlockByHash(hash)
 }
 
+function getGenesisBlock(){
+  return Blocks.getGenesisBlock()
+}
 
+function getLatestBlock(){
+  return Blocks.getLatestBlock()
+}
 
 // API
-const API = {
-  getBlockByHash
+export default {
+  getBlockByHash,
+  getGenesisBlock,
+  getLatestBlock
 }
-export default API

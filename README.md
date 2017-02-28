@@ -64,3 +64,15 @@ https://github.com/babel/babel/tree/master/packages/babel-preset-es2015
 ### Stringify
 Include html templates in javascript files
 https://github.com/JohnPostlethwait/stringify
+
+### Materialize-css
+Let's design a little bit
+http://materializecss.com/
+
+### Material-design-icons
+Icons collection
+http://google.github.io/material-design-icons/
+
+### Font-awesome
+Icons collection
+http://fontawesome.io/

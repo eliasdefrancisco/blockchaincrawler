@@ -43,7 +43,12 @@ gulp.task('browserify', function() {
 })
 
 gulp.task('clean', function() {
-    return del(['www/**', '!www', '!www/font-awesome.ttf'])
+    return del([
+      'www/**',
+      '!www',
+      '!www/vendor',
+      '!www/vendor/**'
+    ])
 })
 
 gulp.task('build', function(callback) {

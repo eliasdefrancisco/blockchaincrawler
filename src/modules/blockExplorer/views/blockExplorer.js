@@ -6,15 +6,22 @@ const BlockExplorerView = Marionette.View.extend({
       genesisBtn: '#genesis-block-btn',
       latestBtn: '#latest-block-btn',
       previousBtn: '#previous-block-btn',
-      hashIn: '#hash-in',
-      hashBtn: '#hash-btn'
+      hashIn: '#hash-in'
     },
     triggers: {
       'click @ui.genesisBtn': 'genesisBtnPressed',
       'click @ui.latestBtn': 'latestBtnPressed',
       'click @ui.previousBtn': 'previousBtnPressed',
-      'click @ui.hashBtn': 'hashBtnPressed' 
     },
+    events: {
+      'keyup @ui.hashIn': ('hashInKeyup')
+    },
+    hashInKeyup(ev){
+      if(ev.key == 'Enter') this.triggerMethod('hash:entered')
+    },
+    // onHashEntered(){
+    //   console.log('hola')
+    // },
     templateContext: {
       dateFormat(date){
         const d = new Date(date * 1000)

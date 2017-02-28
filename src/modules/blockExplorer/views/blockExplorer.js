@@ -19,9 +19,6 @@ const BlockExplorerView = Marionette.View.extend({
     hashInKeyup(ev){
       if(ev.key == 'Enter') this.triggerMethod('hash:entered')
     },
-    // onHashEntered(){
-    //   console.log('hola')
-    // },
     templateContext: {
       dateFormat(date){
         const d = new Date(date * 1000)
@@ -29,6 +26,14 @@ const BlockExplorerView = Marionette.View.extend({
       },
       txLength(tx){
         return eval(tx).length // eval() !!!
+      },
+      formatBytes(bytes,decimals) {
+        if(bytes == 0) return '0 Bytes'
+        const k = 1000
+        const  dm = decimals + 1 || 3
+        const  sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+        const  i = Math.floor(Math.log(bytes) / Math.log(k))
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i]
       }
     }
 })

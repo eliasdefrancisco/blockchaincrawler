@@ -1,3 +1,19 @@
 @import url(vendor/materialize-css/css/materialize.css);
 @import url(vendor/material-design-icons/material-icons.css);
 @import url(vendor/font-awesome/css/font-awesome.css);
+#block-explorer #previous-block-btn {
+  color: #ffab40; }
+
+#block-explorer .card-title * {
+  padding: 0; }
+
+#block-explorer .card-action {
+  text-align: center; }
+  #block-explorer .card-action a {
+    margin: 0; }
+
+#block-explorer .card-content p {
+  overflow-x: auto; }
+
+#block-explorer .card-content .v-space-1 {
+  padding-top: 7px; }

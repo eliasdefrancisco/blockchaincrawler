@@ -1,0 +1,22 @@
+#block-explorer{
+  #previous-block-btn{
+    color: #ffab40;
+  }
+  .card-title *{
+      padding: 0;
+  }
+  .card-action {
+    text-align: center;
+    a{
+      margin: 0;
+    }
+  }
+  .card-content {
+    p{
+      overflow-x: auto;
+    }
+    .v-space-1{
+      padding-top: 7px;
+    }
+  }
+}
